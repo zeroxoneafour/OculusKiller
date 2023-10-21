@@ -19,7 +19,7 @@ namespace OculusKiller
                     string jsonString = File.ReadAllText(openVrPath);
                     dynamic steamVrPath = jss.DeserializeObject(jsonString);
 
-                    string vrStartupPath = Path.Combine(steamVrPath["runtime"][0].ToString(), @"bin\win64\vrstartup.exe");
+                    string vrStartupPath = Path.Combine(steamVrPath["runtime"][0].ToString(), @"bin\win32\vrstartup.exe");
                     if (File.Exists(vrStartupPath))
                     {
                         Process vrStartupProcess = Process.Start(vrStartupPath);
